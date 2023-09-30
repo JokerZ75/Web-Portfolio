@@ -5,6 +5,7 @@ import { typeWriter } from "../lib/utils/typing";
 import Header from "../components/Header";
 import Home from "../components/Sections/Home";
 import About from "../components/Sections/About/About";
+import Projects from "../components/Sections/Projects/Projects";
 
 const IndexPage: React.FC<PageProps> = () => {
   const textRef = React.useRef<HTMLHeadingElement>(null);
@@ -29,6 +30,7 @@ const IndexPage: React.FC<PageProps> = () => {
       <main className="">
         <Home />
         <About />
+        <Projects />
       </main>
     </>
   );

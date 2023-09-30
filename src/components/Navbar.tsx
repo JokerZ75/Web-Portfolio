@@ -13,7 +13,7 @@ const Nav: React.FC = () => {
                     <button onClick={() => scrollTo('#About')}>About</button>
                 </li>
                 <li>
-                    <button onClick={() => scrollTo('#Projects')}>Projects</button>
+                    <button onClick={() => scrollTo('#Projects', 'start')}>Projects</button>
                 </li>
                 <li>
                     <button onClick={() => scrollTo('#Contact')}>Contact</button>

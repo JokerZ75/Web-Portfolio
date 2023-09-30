@@ -16,6 +16,16 @@
   }
 }
 
+@mixin link {
+  color: white;
+  text-decoration: none;
+  transition: all 0.2s ease-in-out;
+
+  &:hover {
+    color: #404d54;
+  }
+}
+
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Source+Code+Pro&display=swap");
 :root {
   font: 16px/1.5 "Inter", sans-serif;
@@ -250,4 +260,68 @@ nav {
 
 .highlight {
   font-weight: 700;
+}
+
+section#Projects {
+  height: auto;
+}
+
+#project-cards {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: max-content;
+  width: 100dvw;
+  gap: 1rem;
+
+
+  @media (min-width: 768px) {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: stretch;
+    gap: 1rem;
+  }
+}
+
+.card {
+  display: inline;
+  padding: 0 1rem 0.5rem 1rem;
+  background: #1e2227;
+  border-radius: 0.5rem;
+  max-width: max-content;
+  width: clamp(250px, 85%, 450px);
+
+  &-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 0.5rem;
+  }
+
+  &-title .heading {
+    margin-top: 0.5rem;
+    font-size: 1.6rem;
+    font-weight: 700;
+    margin-bottom: 0.25rem;
+  }
+
+  &-description {
+    font-weight: 400;
+  }
+
+  &-links {
+    margin: 0.5rem auto;
+
+    & a {
+      @include link;
+      text-decoration: underline;
+      font-size: 2.5rem;
+      font-weight: 500;
+      margin: 0 0.5rem 0 0.5rem;
+    }
+  }
 }

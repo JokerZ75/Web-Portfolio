@@ -4,6 +4,7 @@ import "../styles/index.scss";
 import { typeWriter } from "../lib/utils/typing";
 import Header from "../components/Header";
 import Home from "../components/Sections/Home";
+import About from "../components/Sections/About/About";
 
 const IndexPage: React.FC<PageProps> = () => {
   const textRef = React.useRef<HTMLHeadingElement>(null);
@@ -27,9 +28,7 @@ const IndexPage: React.FC<PageProps> = () => {
       <Header />
       <main className="">
         <Home />
-        <section id="About">
-          <h1 className="text">Hello World</h1>
-        </section>
+        <About />
       </main>
     </>
   );

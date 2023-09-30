@@ -1,3 +1,21 @@
+@mixin button {
+  padding: 0.5rem 1rem;
+  border-radius: 0.25rem;
+  border: none;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+  text-decoration: none;
+  text-align: center;
+  color: white;
+  background: #404d54;
+
+  &:hover {
+    background: #323842;
+  }
+}
+
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Source+Code+Pro&display=swap");
 :root {
   font: 16px/1.5 "Inter", sans-serif;
@@ -42,7 +60,7 @@ section {
   justify-content: center;
   align-items: center;
   text-align: center;
-  background: #1f1f1f;
+  background: #23272e;
 }
 
 header {
@@ -55,7 +73,7 @@ header {
   top: 0;
   width: 100%;
   padding: 0 1rem 0 1rem;
-  background: #181818;
+  background: #1e2227;
 
   & > div {
     width: 100%;
@@ -97,17 +115,17 @@ nav {
     font-size: 1.2rem;
     font-weight: 500;
     transition: all 0.2s ease-in-out;
-    color: white;
+    color: #404d54;
 
     &:hover {
-      color: #ff6b6b;
+      color: white;
       cursor: pointer;
     }
   }
 }
 
 #Home {
-  padding: 1rem;
+  padding:  1rem;
 
   & #home-image {
     width: 100%;
@@ -117,11 +135,81 @@ nav {
     border-radius: 50%;
 
     &-holder {
-      width: 300px;
+      width: auto;
       aspect-ratio: 1/1;
-      height: auto;
+      height: 300px;
       border-radius: 50%;
       margin-bottom: 1rem;
     }
   }
+}
+
+#about-container {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  margin: 0 2rem;
+  border-radius: 0.25rem;
+  width: clamp(300px, 85%, 800px);
+  background: #1e2227;
+}
+
+.scroller {
+  max-width: max-content;
+  background-color: #23272e;
+  border-radius: 0.25rem;
+  padding: 0 0.5rem 1rem 0.5rem;
+  &__inner {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.3rem;
+    list-style: none;
+    padding: 0;
+
+    & > li {
+      height: 100%;
+      background: #323842;
+      border-radius: 0.25rem;
+      padding: 0.5rem;
+      box-shadow: 0 0.5rem 1rem -0.25rem rgba(0, 0, 0, 0.8);
+    }
+  }
+}
+
+.scroller[data-animated="true"] {
+  overflow: hidden;
+  max-width: max-content;
+  padding-bottom:1rem;
+  -webkit-mask: linear-gradient(
+    90deg,
+    transparent,
+    white 15%,
+    white 85%,
+    transparent
+  );
+  mask: linear-gradient(90deg, transparent, white 15%, white 85%, transparent);
+
+  & > .scroller__inner {
+    width: max-content;
+    flex-wrap: nowrap;
+    gap: 1rem;
+    animation: scroll 20s linear infinite;
+
+    & > li {
+      width: 100%;
+      padding: 1rem;
+    }
+  }
+}
+
+@keyframes scroll {
+  to {
+    transform: translateX(calc(-50% - 0.5rem));
+  }
+}
+
+.buttonEl {
+  @include button;
+  
 }

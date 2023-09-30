@@ -6,25 +6,50 @@ const About: React.FC = () => {
   return (
     <section id="About">
       <div id="about-container">
-        <Scroller>
-          <Skill name="React" />
-          <Skill name="TypeScript" />
-          <Skill name="JavaScript" />
-          <Skill name="HTML" />
-          <Skill name="CSS" />
-          <Skill name="Node.js" />
-          <Skill name="Express" />
-          <Skill name="MongoDB" />
-          <Skill name="SQL" />
-          <Skill name="Git" />
-        </Scroller>
+        <div>
+          <div>
+            <h3 className="code-font heading">Skills</h3>
+          </div>
+          <Scroller>
+            <Skill name="React" />
+            <Skill name="TypeScript" />
+            <Skill name="JavaScript" />
+            <Skill name="HTML" />
+            <Skill name="CSS" />
+            <Skill name="Node.js" />
+            <Skill name="Express" />
+            <Skill name="MongoDB" />
+            <Skill name="SQL" />
+            <Skill name="Git" />
+          </Scroller>
+        </div>
+        <div>
+          <h2 className="code-font heading">About Me</h2>
+        </div>
         <div className="about-text">
-          <p>
-            I'm a Software Engineering Student studying at Sheffield Hallam
-            University. I have a passion for web development and have been
-            working on a few projects in my spare time. I am currently looking
-            for a placement year in the Software Engineering industry.
-          </p>
+          <ul>
+            <li>
+              Doncaster native. Where I've learned the values of
+              <span className="highlight"> hard work and resilience</span> that
+              I carry with me in all aspects of life.
+            </li>
+            <li>
+              I'm currently on the path to becoming a software engineer at
+              Sheffield Hallam University.{" "}
+              <span className="highlight">
+                I'm currently looking for my placement job for year 3.
+              </span>
+            </li>
+            <li>
+              While <span className="highlight">coding is my main gig</span>, I
+              do have more to offer. I'm a
+              <span className="highlight"> passionate gamer</span>, always up
+              for a session. Plus, I'm the
+              <span className="highlight"> bassist in a local band</span>,
+              bringing the groove to our tunes. These hobbies keep me balanced
+              and add some excitement to the mix.
+            </li>
+          </ul>
         </div>
       </div>
     </section>

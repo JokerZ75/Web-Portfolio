@@ -35,7 +35,7 @@ body {
   overflow: hidden;
   display: inline;
   animation: blink 1s infinite;
-  color: green;
+  color: rgb(4, 165, 4);
 }
 
 @keyframes blink {
@@ -72,6 +72,7 @@ header {
   position: fixed;
   top: 0;
   width: 100%;
+  z-index: 10;
   padding: 0 1rem 0 1rem;
   background: #1e2227;
 
@@ -125,7 +126,7 @@ nav {
 }
 
 #Home {
-  padding:  1rem;
+  padding: 1rem;
 
   & #home-image {
     width: 100%;
@@ -147,18 +148,18 @@ nav {
 #about-container {
   display: flex;
   flex-direction: column;
-  padding: 1rem;
+  padding: 0.2rem 1rem 1rem 1rem;
   margin: 0 2rem;
   border-radius: 0.25rem;
-  width: clamp(300px, 85%, 800px);
+  width: clamp(250px, 85%, 100dvw);
   background: #1e2227;
 }
 
 .scroller {
-  max-width: max-content;
+  max-width: 100%;
   background-color: #23272e;
   border-radius: 0.25rem;
-  padding: 0 0.5rem 1rem 0.5rem;
+  padding: 0.1rem 0.5rem 1rem 0.5rem;
   &__inner {
     display: flex;
     flex-wrap: wrap;
@@ -180,7 +181,7 @@ nav {
 .scroller[data-animated="true"] {
   overflow: hidden;
   max-width: max-content;
-  padding-bottom:1rem;
+  padding-bottom: 1rem;
   -webkit-mask: linear-gradient(
     90deg,
     transparent,
@@ -211,5 +212,36 @@ nav {
 
 .buttonEl {
   @include button;
-  
+}
+
+.heading {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 0.25rem;
+  letter-spacing: 0.15rem;
+
+  &.code-font {
+    animation: none;
+    border-right: none;
+  }
+}
+
+.about-text {
+  font-weight: 400;
+
+  & ul {
+    list-style: none;
+    padding-left: 0;
+    gap: 0.5rem;
+
+    & li {
+      border-radius: 0.25rem;
+      padding: 0.5rem;
+      box-shadow: 0, 0, 0, 0.25 rgba(0, 0, 0, 0.25);
+    }
+  }
+}
+
+.highlight {
+  font-weight: 700;
 }

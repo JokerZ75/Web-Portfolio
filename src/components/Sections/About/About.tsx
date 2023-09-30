@@ -11,14 +11,19 @@ const About: React.FC = () => {
             <h3 className="code-font heading">Skills</h3>
           </div>
           <Scroller>
-            <Skill name="React" />
+            <Skill name="C#" />
+            <Skill name="MongoDB" />
+            <Skill name="Express" />
+            <Skill name="React.js" />
+            <Skill name="Node.js" />
+            <Skill name="Next.js" />
             <Skill name="TypeScript" />
             <Skill name="JavaScript" />
             <Skill name="HTML" />
             <Skill name="CSS" />
-            <Skill name="Node.js" />
-            <Skill name="Express" />
-            <Skill name="MongoDB" />
+            <Skill name="TailwindCSS" />
+            <Skill name="SASS" />
+            <Skill name="PHP" />
             <Skill name="SQL" />
             <Skill name="Git" />
           </Scroller>

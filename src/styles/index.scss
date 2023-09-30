@@ -160,6 +160,7 @@ nav {
   background-color: #23272e;
   border-radius: 0.25rem;
   padding: 0.1rem 0.5rem 1rem 0.5rem;
+  transition: all 0.2s ease-in-out;
   &__inner {
     display: flex;
     flex-wrap: wrap;
@@ -167,6 +168,7 @@ nav {
     gap: 0.3rem;
     list-style: none;
     padding: 0;
+    transition: all 0.2s ease-in-out;
 
     & > li {
       height: 100%;
@@ -174,11 +176,13 @@ nav {
       border-radius: 0.25rem;
       padding: 0.5rem;
       box-shadow: 0 0.5rem 1rem -0.25rem rgba(0, 0, 0, 0.8);
+      transition: all 0.2s ease-in-out;
     }
   }
 }
 
 .scroller[data-animated="true"] {
+  transition: all 0.5s ease-in-out;
   overflow: hidden;
   max-width: max-content;
   padding-bottom: 1rem;
@@ -195,11 +199,13 @@ nav {
     width: max-content;
     flex-wrap: nowrap;
     gap: 1rem;
-    animation: scroll 20s linear infinite;
+    animation: scroll 30s linear infinite;
+    transition: all 0.5s ease-in-out;
 
     & > li {
       width: 100%;
       padding: 1rem;
+      transition: all 0.5s ease-in-out;
     }
   }
 }

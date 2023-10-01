@@ -79,9 +79,8 @@ header {
   justify-content: center;
   align-items: center;
   text-align: center;
-  position: fixed;
+  position: sticky;
   top: 0;
-  width: 100%;
   z-index: 10;
   padding: 0 1rem 0 1rem;
   background: #1e2227;
@@ -276,7 +275,6 @@ section#Projects {
   width: 100dvw;
   gap: 1rem;
 
-
   @media (min-width: 768px) {
     flex-direction: row;
     flex-wrap: wrap;
@@ -323,5 +321,96 @@ section#Projects {
       font-weight: 500;
       margin: 0 0.5rem 0 0.5rem;
     }
+  }
+}
+
+#contact-form {
+  padding: 1rem;
+  margin: 0 2rem;
+  border-radius: 0.25rem;
+  width: clamp(250px, 85%, 100dvw);
+  background: #1e2227;
+
+  & .form-group {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+
+    @media (min-width: 768px) {
+      display: grid;
+      grid-template-columns: 200px 1fr;
+      gap: 1rem;
+      align-items: start;
+    }
+  }
+
+  & label {
+    font-size: 1.2rem;
+    font-weight: 500;
+
+    @media (min-width: 768px) {
+      text-align: left;
+      width: 200px;
+      background: #323842;
+      padding: 0.5rem;
+      border-radius: 0.25rem;
+
+    }
+  }
+
+  & input,
+  textarea {
+    width: 85%;
+    padding: 0.5rem;
+    border-radius: 0.25rem;
+    border: none;
+    background: #323842;
+    color: white;
+    font-size: 1.2rem;
+    font-weight: 400;
+    transition: all 0.2s ease-in-out;
+
+    &:focus {
+      outline: none;
+      box-shadow: 0 0 0 0.25rem rgba(0, 0, 0, 0.25);
+    }
+
+    @media (min-width: 768px) {
+      margin-left: 1rem;
+      width: 95%;
+      
+    }
+  }
+
+  & textarea {
+    resize: none;
+    height: 10rem;
+  }
+
+  & button {
+    @include button;
+    width: 100%;
+    margin-top: 0.5rem;
+
+    @media (min-width: 768px) {
+      grid-column: 1 / span 2;
+      height: 3rem;
+    }
+  }
+}
+
+.contact-icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 1rem;
+
+  & a {
+    @include link;
+    font-size: 2.5rem;
+    font-weight: 500;
   }
 }

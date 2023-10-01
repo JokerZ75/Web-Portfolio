@@ -6,6 +6,7 @@ import Header from "../components/Header";
 import Home from "../components/Sections/Home";
 import About from "../components/Sections/About/About";
 import Projects from "../components/Sections/Projects/Projects";
+import Contact from "../components/Sections/Contact";
 
 const IndexPage: React.FC<PageProps> = () => {
   const textRef = React.useRef<HTMLHeadingElement>(null);
@@ -31,6 +32,7 @@ const IndexPage: React.FC<PageProps> = () => {
         <Home />
         <About />
         <Projects />
+        <Contact />
       </main>
     </>
   );

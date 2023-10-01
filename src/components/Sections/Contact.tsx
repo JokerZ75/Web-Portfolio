@@ -39,21 +39,21 @@ const Contact: React.FC = () => {
               required
             ></textarea>
             <input type="hidden" name="_gotcha" />
-            <button type="submit" className="btn btn-primary">
+            <button type="submit" className="">
               Send
             </button>
           </div>
         </form>
         <div className="contact-icons">
-          <Link to="https://www.linkedin.com/in/deacon-hughes-251621243/">
+          <a href="https://www.linkedin.com/in/deacon-hughes-251621243/" target="_blank">
             <FaLinkedin className="contact-icon" />
-          </Link>
-          <Link to="https://github.com/JokerZ75">
+          </a>
+          <a href="https://github.com/JokerZ75" target="_blank">
             <FaGithub className="contact-icon" />
-          </Link>
-          <Link to="mailto:dhughes1704@icloud.com">
+          </a>
+          <a href="mailto:dhughes1704@icloud.com" target="_blank">
             <FaEnvelope className="contact-icon" />
-          </Link>
+          </a>
         </div>
       </div>
     </section>

@@ -414,3 +414,24 @@ section#Projects {
     font-weight: 500;
   }
 }
+
+footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 1rem;
+  background: #1e2227;
+
+  & p {
+    font-size: 1.2rem;
+    font-weight: 500;
+  }
+
+  & a {
+    @include link;
+    font-size: 1.2rem;
+    font-weight: 500;
+  }
+}

@@ -27,7 +27,7 @@ const Card: React.FC<CardProps> = ({
         <h3 className="heading">{title}</h3>
       </div>
       <div className="card-image-skill">
-        <img className="card-image" src={image} alt={title} />
+        <img className="card-image" src={image} alt={title + " image"} />
         <Scroller>
           {skills.map((skill) => (
             <Skill name={skill} />
@@ -39,14 +39,14 @@ const Card: React.FC<CardProps> = ({
       </div>
       <div className="card-links">
         {liveDemo && (
-          <Link to={liveDemo} target="_blank" rel="noreferrer">
+          <a href={liveDemo} target="_blank" rel="noreferrer">
             <BiWorld />
-          </Link>
+          </a>
         )}
         {gitHub && (
-          <Link to={gitHub} target="_blank" rel="noreferrer">
+          <a href={gitHub} target="_blank" rel="noreferrer">
             <FaGithub />
-          </Link>
+          </a>
         )}
       </div>
     </div>

@@ -5,6 +5,7 @@ const config: GatsbyConfig = {
   siteMetadata: {
     title: `Portfolio`,
     siteUrl: `https://www.yourdomain.tld`,
+
   },
   // More easily incorporate content into your pages through automatic TypeScript type generation and better GraphQL IntelliSense.
   // If you use VSCode you can also use the GraphQL plugin
@@ -16,6 +17,7 @@ const config: GatsbyConfig = {
     `gatsby-plugin-image`,
     `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`,
+    'gh-pages',
     {
       resolve: "gatsby-plugin-manifest",
       options: {
@@ -23,6 +25,7 @@ const config: GatsbyConfig = {
       },
     },
   ],
+  pathPrefix: "/Web-Portfolio",
 };
 
 export default config;

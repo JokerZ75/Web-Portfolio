@@ -109,13 +109,17 @@ nav {
     padding: 0;
     flex-direction: row;
     list-style: none;
+    gap: 1rem;
 
     & li:first-child {
       margin-left: 0;
+      
+      & button {
+        padding-left: 0;
+      }
     }
 
     & li {
-      margin: 0 0.5rem 0 0.5rem;
       font-weight: 500;
       font-size: 1.2rem;
       transition: all 0.2s ease-in-out;
@@ -145,7 +149,7 @@ nav {
 }
 
  #cv {
-  margin-left: 0.2rem;
+
   border: none;
   background: none;
   font-size: 1.2rem;
@@ -302,7 +306,7 @@ section#Projects {
   justify-content: center;
   align-items: center;
   max-width: max-content;
-  width: 100dvw;
+  width: 100%;
   gap: 1rem;
 
   @media (min-width: 768px) {

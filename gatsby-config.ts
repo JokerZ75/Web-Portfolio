@@ -25,7 +25,7 @@ const config: GatsbyConfig = {
       },
     },
   ],
-  pathPrefix: "/Web-Portfolio",
+  pathPrefix: "/",
 };
 
 export default config;

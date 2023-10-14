@@ -13,9 +13,8 @@ const Projects: React.FC = () => {
       </div>
       <div id="project-cards">
         <Card
-          image="https://i.imgur.com/5QZQ9Xo.png"
-          title="Orders/Sales Admin Panel"
-          description="Experience the power of streamlined business operations with my Orders/Sales Admin Panel project, built on the robust MERN stack (MongoDB, Express.js, React.js, Node.js). Leveraging a full-stack approach with TypeScript, SCSS, and Jwt authentication, this admin panel is designed to simplify the management of orders and sales data."
+          title="Orders/Sales Admin Panel (recommend view on youtube)"
+          description="I recommend you watch it on youtube by clicking the video title. Experience the power of streamlined business operations with my Orders/Sales Admin Panel project, built on the robust MERN stack (MongoDB, Express.js, React.js, Node.js). Leveraging a full-stack approach with TypeScript, SCSS, and Jwt authentication, this admin panel is designed to simplify the management of orders and sales data."
           skills={[
             "MongoDB",
             "Express.js",
@@ -27,7 +26,16 @@ const Projects: React.FC = () => {
             "Mongoose",
           ]}
           gitHub="https://github.com/JokerZ75/Admin-Panel"
-        />
+        >
+          <iframe
+            className="card-image"
+            src="https://www.youtube.com/embed/nEDY_QL7a_k?si=bvWdKbGN9J7dsgQN"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen={true}
+          ></iframe>
+        </Card>
         <Card
           image={Dhughes}
           title="DHughes Store"

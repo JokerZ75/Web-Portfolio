@@ -1,16 +1,17 @@
-import React from "react";
+import React, { ReactNode } from "react";
 import Scroller from "../About/Scroller";
 import Skill from "../About/Skill";
 import { Link } from "gatsby";
 import { FaGithub } from "@react-icons/all-files/fa/FaGithub";
 import { BiWorld } from "@react-icons/all-files/bi/BiWorld";
 interface CardProps {
-  image: string;
+  image?: string;
   title: string;
   description: string;
   skills: string[];
   liveDemo?: string;
   gitHub?: string;
+  children?: ReactNode;
 }
 
 const Card: React.FC<CardProps> = ({
@@ -20,6 +21,7 @@ const Card: React.FC<CardProps> = ({
   skills,
   liveDemo,
   gitHub,
+  children: embed,
 }) => {
   return (
     <div className="card">
@@ -27,7 +29,8 @@ const Card: React.FC<CardProps> = ({
         <h3 className="heading">{title}</h3>
       </div>
       <div className="card-image-skill">
-        <img className="card-image" src={image} alt={title + " image"} />
+        {image && <img className="card-image" src={image} alt={title + " image"} />}
+        {embed && <div className="card-embed">{embed}</div>}
         <Scroller>
           {skills.map((skill) => (
             <Skill name={skill} />

@@ -7,13 +7,10 @@ interface ScrollerProps {
 }
 
 const Scroller: React.FC<ScrollerProps> = ({ children }) => {
-  const scrollersRef = React.useRef<{
-    OuterScroller: HTMLDivElement | null;
-    InnerScroller: HTMLUListElement | null;
-  }>({
-    OuterScroller: null,
-    InnerScroller: null,
-  });
+
+
+  const scrollerRefInner = React.useRef<HTMLUListElement>(null);
+  const scrollerRefOuter = React.useRef<HTMLDivElement>(null);
   const [animated, setAnimated] = React.useState(false);
 
   function addAnimation(scroller: HTMLElement | null) {
@@ -46,31 +43,27 @@ const Scroller: React.FC<ScrollerProps> = ({ children }) => {
 
   React.useEffect(() => {
     if (!window.matchMedia("(prefers-reduced-motion:reduce)").matches) {
-      addAnimation(scrollersRef.current.OuterScroller);
-      addAnimation(scrollersRef.current.InnerScroller);
+      addAnimation(scrollerRefOuter.current);
+      addAnimation(scrollerRefInner.current);
     }
-  }, [scrollersRef]);
+  }, [scrollerRefInner, scrollerRefOuter, ]);
 
   return (
     <div
       className="scroller"
-      ref={(ref) => {
-        scrollersRef.current.OuterScroller = ref;
-      }}
+      ref={scrollerRefOuter}
     >
       <ul
         className="tag-list scroller__inner"
-        ref={(ref) => {
-          scrollersRef.current.InnerScroller = ref;
-        }}
+        ref={scrollerRefInner}
       >
         {children}
       </ul>
       {animated ? (
         <Button
           onClick={() => {
-            removeAnimation(scrollersRef.current.OuterScroller);
-            removeAnimation(scrollersRef.current.InnerScroller);
+            removeAnimation(scrollerRefOuter.current);
+            removeAnimation(scrollerRefInner.current);
           }}
         >
           View as List
@@ -78,8 +71,8 @@ const Scroller: React.FC<ScrollerProps> = ({ children }) => {
       ) : (
         <Button
           onClick={() => {
-            addAnimation(scrollersRef.current.OuterScroller);
-            addAnimation(scrollersRef.current.InnerScroller);
+            addAnimation(scrollerRefOuter.current);
+            addAnimation(scrollerRefInner.current);
           }}
         >
           Animate

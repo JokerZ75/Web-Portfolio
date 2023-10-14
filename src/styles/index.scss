@@ -103,13 +103,19 @@ header {
 
 nav {
   display: flex;
-  width: 100%;
+  margin-right: 0;
+  padding-right: 0;
   & ul {
     display: flex;
     padding: 0;
     flex-direction: row;
     list-style: none;
-    gap: 1rem;
+    justify-content: space-around;
+
+    @media (min-width: 768px) {
+      justify-content: flex-start;
+      gap: 1rem;
+    }
 
     & li:first-child {
       margin-left: 0;
@@ -119,9 +125,10 @@ nav {
       }
     }
 
+
     & li {
       font-weight: 500;
-      font-size: 1.2rem;
+      font-size: 1rem;
       transition: all 0.2s ease-in-out;
     }
   }
@@ -194,7 +201,7 @@ nav {
   padding: 0.2rem 1rem 1rem 1rem;
   margin: 0 2rem;
   border-radius: 0.25rem;
-  width: clamp(250px, 85%, 100dvw);
+  width: clamp(250px, 85%, 100%);
   background: #1e2227;
 }
 
@@ -362,7 +369,7 @@ section#Projects {
   padding: 1rem;
   margin: 0 2rem;
   border-radius: 0.25rem;
-  width: clamp(250px, 85%, 100dvw);
+  width: clamp(250px, 85%, 100%);
   background: #1e2227;
 
   & .form-group {

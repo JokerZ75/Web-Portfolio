@@ -31,6 +31,10 @@
   font: 16px/1.5 "Inter", sans-serif;
 }
 
+html,body{
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
   padding: 0;

@@ -51,7 +51,7 @@ const Contact: React.FC = () => {
           <a href="https://github.com/JokerZ75" target="_blank">
             <FaGithub className="contact-icon" />
           </a>
-          <a href="mailto:dhughes1704@icloud.com" target="_blank">
+          <a href="mailto:deac.dev@gmail.com" target="_blank">
             <FaEnvelope className="contact-icon" />
           </a>
         </div>
